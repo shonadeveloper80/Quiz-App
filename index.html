@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Crimson+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quiz-style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>Knowledge Quiz</h1>
+            <p class="quiz-subtitle">Test your knowledge and challenge yourself!</p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+
+        <div class="quiz-body">
+            <div id="quizContent">
+                <div class="question-counter" id="questionCounter"></div>
+                <h2 class="question-text" id="questionText"></h2>
+                <div class="options-container" id="optionsContainer"></div>
+                <div class="quiz-controls">
+                    <div class="score-display" id="scoreDisplay">Score: <span id="currentScore">0</span></div>
+                    <button class="btn btn-primary" id="nextBtn" disabled>Next Question</button>
+                </div>
+            </div>
+
+            <div id="resultsContent" class="results-container hidden">
+                <h2 class="results-message" id="resultsMessage"></h2>
+                <div class="results-score" id="finalScore"></div>
+                <p class="results-detail" id="resultsDetail"></p>
+                <div class="results-breakdown">
+                    <div class="stat">
+                        <span class="stat-number correct" id="correctCount">0</span>
+                        <span class="stat-label">Correct</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number incorrect" id="incorrectCount">0</span>
+                        <span class="stat-label">Incorrect</span>
+                    </div>
+                </div>
+                <button class="btn btn-secondary" id="restartBtn">Take Quiz Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="quiz-script.js"></script>
+</body>
+</html>
